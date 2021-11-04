@@ -1,0 +1,55 @@
+@import "./variables.scss";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(../assets/home/background-home-desktop.jpg) no-repeat center center/cover;
+  line-height: 1.5;
+  min-height: 100vh;
+  font-family: $ff__sans__normal;
+  font-size: 62.5%;
+  // font-size: $fs__400;  - not sure
+  color: hsl(hue($clr__white), saturation($clr__white), lightness($clr__white));
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+img,
+picutre {
+  max-width: 100%;
+  display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}

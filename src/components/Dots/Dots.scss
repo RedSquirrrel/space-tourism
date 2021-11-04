@@ -1,0 +1,23 @@
+@import "../../styles/variables.scss";
+@import "../../styles/utilities.scss";
+
+.dot-indicators > * {
+  cursor: pointer;
+  border: 0;
+  border-radius: 50%;
+  aspect-ratio: 1;
+
+  padding: 1em;
+  // gap: 4rem;
+  margin-right: 1rem;
+  background-color: hsla(hue($clr__white), saturation($clr__white), lightness($clr__white), 0.25);
+
+  &:hover,
+  :focus {
+    background-color: hsla(hue($clr__white), saturation($clr__white), lightness($clr__white), 0.5);
+  }
+
+  &.activee {
+    background-color: hsla(hue($clr__white), saturation($clr__white), lightness($clr__white), 1);
+  }
+}
