@@ -1,29 +1,34 @@
 import Navigation from "../Navigation/Navigation";
 import "./Home.scss";
-import logo from "../../assets/shared/logo.svg";
 
 const Home = () => {
   return (
-    <div className="container">
-      <div className="flex">
-        <img src={logo} alt="logo" />
-        <Navigation />
-      </div>
-      <div className="flex">
+    <>
+      <Navigation />
+      <div className="grid-container">
         <div>
-          <p className="uppercase">So, you want to travel to</p>
-          <h1 className="uppercase">Space</h1>
+          <h1 className="uppercase text-accent fs-500 ff-sans-cond letter-spacing-1">
+            So, you want to travel to
+            <span className="fs-900 ff-serif text-white"> Space</span>
+          </h1>
           <p>
             Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind
             of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!
+            00 Home 01 Destination 02 Crew 03 Technology So, you want to travel to Space Let’s face it; if you want to
+            go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit
+            back, and relax because we’ll give you a truly out of this world experience! Explore
           </p>
         </div>
-
-        <a className="large-button uppercase ff-serif bg-white text-dark fs-600" href="#">
-          Explore
-        </a>
+        <div>
+          <a
+            className="grid-container__large-button uppercase ff-serif bg-white text-dark fs-600"
+            href="https://changeme.com"
+          >
+            Explore
+          </a>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

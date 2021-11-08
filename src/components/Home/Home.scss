@@ -1,33 +1,49 @@
 @import "../../styles/variables.scss";
 
-// large button  Compontents
-.large-button {
-  position: relative;
-  padding: 0 2em;
+.grid-container {
   display: grid;
-  place-items: center;
-  // instead of height and width
-  aspect-ratio: 1;
-  text-decoration: none;
-  border-radius: 50%;
-  z-index: 1;
+  // column-gap: $gap, 2rem;
+  column-gap: 2rem;
+  grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);
+  border: 5px solid limegreen;
 
-  &::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    background: hsla(hue($clr__white), saturation($clr__white), lightness($clr__white), 0.15);
-    // background: rgba(($clr__white), 0.3);
-    // background: rgba(255, 255, 255, 0.315);
-    border-radius: inherit;
-    opacity: 0;
-    transition: opacity 500ms linear, transform 500ms ease-in-out;
+  & > *:first-child {
+    grid-column: 2;
+    background: #000;
   }
-  &:hover::after,
-  :focus::after {
-    opacity: 1;
-    transform: scale(1.5);
+  & > *:last-child {
+    grid-column: 3;
+    outline: 1px solid blue;
+  }
+
+  &__large-button {
+    position: relative;
+    padding: 0 2em;
+    display: inline-grid;
+    place-items: center;
+    // instead of height and width
+    aspect-ratio: 1;
+    text-decoration: none;
+    border-radius: 50%;
+    z-index: 1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background: hsla(hue($clr__white), saturation($clr__white), lightness($clr__white), 0.15);
+      // background: rgba(($clr__white), 0.3);
+      // background: rgba(255, 255, 255, 0.315);
+      border-radius: inherit;
+      opacity: 0;
+      transition: opacity 500ms linear, transform 500ms ease-in-out;
+    }
+    &:hover::after,
+    :focus::after {
+      opacity: 1;
+      transform: scale(1.5);
+    }
   }
 }
