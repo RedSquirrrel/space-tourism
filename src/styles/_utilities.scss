@@ -10,6 +10,10 @@
   // gap: $gap, 1rem;
 }
 
+.d-block {
+  display: block;
+}
+
 .flow > *:where(:not(:first-child)) {
   // margin-top: $flow__space, 1rem;
   margin-top: 1rem;
@@ -127,23 +131,6 @@
   margin-right: 0.5rem;
   font-weight: 700;
   color: hsla(hue($clr__white), saturation($clr__white), lightness($clr__white), 0.25);
-}
-
-.primary-navigation {
-  gap: 8rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.primary-navigation a {
-  gap: 8rem;
-  text-decoration: none;
-}
-
-.primary-navigation a > span {
-  font-weight: 700;
-  margin-right: 0.5em;
 }
 
 .underline-indicators > * {

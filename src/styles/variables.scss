@@ -1,6 +1,4 @@
 //  colors
-$clr__dark: hsl(230, 35%, 7%);
-$clr__light: hsl(231, 77%, 90%);
 $clr__white: hsl(0, 0%, 100%);
 $clr__dark: hsl(230, 35%, 7%);
 $clr__light: hsl(231, 77%, 90%);
@@ -8,7 +6,8 @@ $clr__white: hsl(0, 0%, 100%);
 $clr__alpha: 0.8;
 
 // font-sizes
-$fs__900: 9.375rem;
+// $fs__900: 9.375rem;
+$fs__900: clamp(4rem, 7vw, 9.375rem);
 $fs__800: 6.25rem;
 $fs__700: 3.5rem;
 $fs__600: 2rem;
@@ -17,6 +16,16 @@ $fs__400: 1.125rem;
 $fs__300: 1rem;
 $fs__200: 0.875rem;
 
+// $fs__tablets__800: 6.25rem;
+// $fs__tablets__700: 3.5rem;
+// $fs__tablets__600: 2rem;
+// $fs__tablets__400: 1.125rem;
+
+// $fs__s-phone__800: 5rem;
+// $fs__s-phone__700: 2.5rem;
+// $fs__s-phone__600: 1.5rem;
+// $fs__s-phone__400: 1rem;
+
 // font-families
 $ff__serif: "Bellefair", serif;
 $ff__sans__cond: "Barlow Condensed", sans-serif;
@@ -24,3 +33,36 @@ $ff__sans__normal: "Barlow", sans-serif;
 
 // gap
 $gap: 1rem;
+$vh__15: 20vh;
+
+$headerHeight: 100px;
+
+@mixin breakpoint($point) {
+  @if $point == smallPhones {
+    // below 544px
+    @media (max-width: 45em) {
+      @content;
+    }
+  }
+
+  @if $point == tablets {
+    // above 944px
+    @media (min-width: 35em) {
+      @content;
+    }
+  }
+
+  @if $point == md {
+    // 768px
+    @media (min-width: 45em) {
+      @content;
+    }
+  }
+
+  @if $point == desktop {
+    // below 1200px
+    @media (min-width: 65em) {
+      @content;
+    }
+  }
+}
