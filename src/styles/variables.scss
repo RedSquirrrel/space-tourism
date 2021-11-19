@@ -40,7 +40,7 @@ $headerHeight: 100px;
 @mixin breakpoint($point) {
   @if $point == smallPhones {
     // below 544px
-    @media (max-width: 45em) {
+    @media (max-width: 34em) {
       @content;
     }
   }
@@ -54,7 +54,7 @@ $headerHeight: 100px;
 
   @if $point == md {
     // 768px
-    @media (min-width: 45em) {
+    @media (min-width: 34em) {
       @content;
     }
   }

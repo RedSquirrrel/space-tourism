@@ -8,45 +8,35 @@ import "./Header.scss";
 import logo from "../../assets/shared/logo.svg";
 
 const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [size, setSize] = useState({
-    width: undefined,
-    height: undefined,
-  });
+  const shouldBeOpen = () => window.innerWidth > 560;
+  const [menuOpen, setMenuOpen] = useState(shouldBeOpen);
 
   useEffect(() => {
-    const handleResize = () => {
-      setSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
+    window.addEventListener("resize", () => {
+      setMenuOpen(shouldBeOpen());
+    });
+
+    return () =>
+      window.removeEventListener("resize", () => {
+        setMenuOpen(shouldBeOpen());
       });
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  useEffect(() => {
-    if (size.width > 768 && menuOpen) {
-      setMenuOpen(false);
-    }
-  }, [size.width, size.height, menuOpen]);
+  }, [menuOpen]);
 
   const menuToggleHander = () => {
     setMenuOpen((p) => !p);
   };
 
   return (
-    // <header className="primary-header flex">
     <header className="header">
       <div className="header__content">
         <Link to="/">
           <img className="header__content__logo" src={logo} alt="logo" />
         </Link>
 
-        <div className={`header__content__nav ${menuOpen && size.width < 768 ? "isMenu" : " "}`}>
+        <div className={`header__content__nav ${menuOpen ? "isMenu" : " "}`}>
           <ul className="header__content__primary-navigation underline-indicators flex">
             <li className="active">
-              <Link to="/" className="ff-sans-cond uppercase text-white letter-spacing-2">
+              <Link to="/" onClick={menuToggleHander} className="ff-sans-cond uppercase text-white letter-spacing-2">
                 <span aria-hidden="true">01</span>Home
               </Link>
             </li>

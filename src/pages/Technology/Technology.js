@@ -1,14 +1,12 @@
-import Header from "../../components/Header/Header";
+import "./Technology.scss";
 
 const Technology = () => {
   return (
-    <>
-      <nav>
-        <Header />
-      </nav>
-      <Header />
-      <h1>Destination</h1>;
-    </>
+    <div className="technology">
+      <h1>
+        <span>03</span> Space Launch 101
+      </h1>
+    </div>
   );
 };
 

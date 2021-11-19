@@ -1,0 +1,14 @@
+@import "./../../styles/variables.scss";
+
+.crew {
+  min-height: 100vh;
+  overflow: hidden;
+  background: url(../../assets/crew/background-crew-mobile.jpg) no-repeat center bottom/cover;
+
+  @include breakpoint(tablets) {
+    background: url(../../assets/crew/background-crew-tablet.jpg) no-repeat center center/cover;
+  }
+  @include breakpoint(desktop) {
+    background: url(../../assets/crew/background-crew-desktop.jpg) no-repeat center center/cover;
+  }
+}

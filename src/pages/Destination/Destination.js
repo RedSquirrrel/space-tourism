@@ -1,13 +1,12 @@
-import Header from "../../components/Header/Header";
+import "./Destination.scss";
 
 const Destination = () => {
   return (
-    <>
-      <nav>
-        <Header />
-      </nav>
-      <h1>Destination</h1>;
-    </>
+    <div className="destination">
+      <h1>
+        <span>01</span> Pick Your Destination
+      </h1>
+    </div>
   );
 };
 

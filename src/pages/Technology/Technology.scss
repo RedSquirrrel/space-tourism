@@ -1,0 +1,14 @@
+@import "./../../styles/variables.scss";
+
+.technology {
+  min-height: 100vh;
+  overflow: hidden;
+  background: url(../../assets/technology/background-technology-mobile.jpg) no-repeat center bottom/cover;
+
+  @include breakpoint(tablets) {
+    background: url(../../assets/technology/background-technology-tablet.jpg) no-repeat center center/cover;
+  }
+  @include breakpoint(desktop) {
+    background: url(../../assets/technology/background-technology-desktop.jpg) no-repeat center center/cover;
+  }
+}

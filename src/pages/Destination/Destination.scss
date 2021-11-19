@@ -1,0 +1,14 @@
+@import "./../../styles/variables.scss";
+
+.destination {
+  min-height: 100vh;
+  overflow: hidden;
+  background: url(../../assets/destination/background-destination-mobile.jpg) no-repeat center bottom/cover;
+
+  @include breakpoint(tablets) {
+    background: url(../../assets/destination/background-destination-tablet.jpg) no-repeat center center/cover;
+  }
+  @include breakpoint(desktop) {
+    background: url(../../assets/destination/background-destination-desktop.jpg) no-repeat center center/cover;
+  }
+}
