@@ -4,18 +4,28 @@ import Destination from "./pages/Destination/Destination";
 import Crew from "./pages/Crew/Crew";
 import Technology from "./pages/Technology/Technology";
 import Header from "./components/Header/Header";
+import React, { useState, useEffect } from "react";
+import jsonData from "./data.json";
 
 const App = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    setData(jsonData);
+  }, [data]);
+
+  console.log(data);
+
   return (
-    <div>
+    <>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/destination" element={<Destination />} />
+        <Route path="/destination" element={<Destination data={data} />} />
         <Route path="/crew" element={<Crew />} />
         <Route path="/technology" element={<Technology />} />
       </Routes>
-    </div>
+    </>
   );
 };
 export default App;

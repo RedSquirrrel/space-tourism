@@ -1,12 +1,9 @@
-import Header from "../../components/Header/Header";
+// import Header from "../../components/Header/Header";
 import "./Home.scss";
 
 const Home = () => {
   return (
-    <>
-      <nav>
-        <Header />
-      </nav>
+    <div>
       <a className="fs-300 text-dark bg-white skip-to-content" href="#main">
         Skip to content
       </a>
@@ -34,7 +31,7 @@ const Home = () => {
           </div>
         </div>
       </main>
-    </>
+    </div>
   );
 };
 

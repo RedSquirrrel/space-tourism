@@ -1,14 +1,57 @@
 @import "./../../styles/variables.scss";
 
 .destination {
+  // height: calc(100vh - #{$headerHeight});
   min-height: 100vh;
   overflow: hidden;
   background: url(../../assets/destination/background-destination-mobile.jpg) no-repeat center bottom/cover;
+  padding-top: 10rem;
 
   @include breakpoint(tablets) {
     background: url(../../assets/destination/background-destination-tablet.jpg) no-repeat center center/cover;
   }
   @include breakpoint(desktop) {
     background: url(../../assets/destination/background-destination-desktop.jpg) no-repeat center center/cover;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: flex-start;
+
+    @include breakpoint(smallPhones) {
+      flex-direction: row;
+      padding-bottom: 5rem;
+      margin-left: 0;
+    }
+
+    &__active {
+      background: transparent;
+      border: none;
+      padding: 0.5rem 2rem;
+      font-size: 1rem;
+      align-self: flex-start;
+      cursor: pointer;
+      color: #fff;
+
+      @include breakpoint(smallPhones) {
+        padding: 0.1rem;
+      }
+    }
+
+    &__btn {
+      background: transparent;
+      border: none;
+      padding: 0.5rem 2rem;
+      font-size: 1rem;
+      align-self: flex-start;
+      cursor: pointer;
+      color: rgba(255, 255, 255, 0.541);
+
+      @include breakpoint(smallPhones) {
+        padding: 0.1rem;
+      }
+    }
   }
 }
