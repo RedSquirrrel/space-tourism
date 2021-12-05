@@ -1,57 +1,111 @@
-@import "./../../styles/variables.scss";
+@import './../../styles/variables.scss';
 
-.destination {
-  // height: calc(100vh - #{$headerHeight});
-  min-height: 100vh;
-  overflow: hidden;
+main {
   background: url(../../assets/destination/background-destination-mobile.jpg) no-repeat center bottom/cover;
-  padding-top: 10rem;
+  padding-top: 8rem;
 
-  @include breakpoint(tablets) {
+  @include breakpoint(35em) {
     background: url(../../assets/destination/background-destination-tablet.jpg) no-repeat center center/cover;
   }
-  @include breakpoint(desktop) {
+
+  @include breakpoint(45em) {
     background: url(../../assets/destination/background-destination-desktop.jpg) no-repeat center center/cover;
+    grid-template-areas:
+      '. title title .'
+      '. image tabs .'
+      '. image content .';
   }
 
-  &__buttons {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-content: flex-start;
+  grid-template-areas:
+    'title'
+    'image'
+    'tabs'
+    'content';
 
-    @include breakpoint(smallPhones) {
-      flex-direction: row;
-      padding-bottom: 5rem;
-      margin-left: 0;
-    }
+  .destination {
+    &__title {
+      grid-area: title;
+      font-size: $fs__16px;
+      margin-bottom: 32px;
 
-    &__active {
-      background: transparent;
-      border: none;
-      padding: 0.5rem 2rem;
-      font-size: 1rem;
-      align-self: flex-start;
-      cursor: pointer;
-      color: #fff;
+      @include breakpoint(35em) {
+        justify-self: start;
+        margin-top: 2rem;
+      }
 
-      @include breakpoint(smallPhones) {
-        padding: 0.1rem;
+      @include breakpoint(45em) {
+        font-size: $fs__28px;
       }
     }
 
-    &__btn {
-      background: transparent;
-      border: none;
-      padding: 0.5rem 2rem;
-      font-size: 1rem;
-      align-self: flex-start;
-      cursor: pointer;
-      color: rgba(255, 255, 255, 0.541);
+    &__img {
+      grid-area: image;
+      max-width: 60%;
+      margin-bottom: 26px;
 
-      @include breakpoint(smallPhones) {
-        padding: 0.1rem;
+      @include breakpoint(45em) {
+        max-width: 90%;
       }
     }
+
+    &__name {
+      font-size: $fs__56px;
+      margin-bottom: 1px;
+
+      @include breakpoint(45em) {
+        font-size: $fs__100px;
+      }
+    }
+    &__buttons {
+      grid-area: tabs;
+      margin-bottom: 20px;
+    }
+
+    &__info {
+      grid-area: content;
+
+      p {
+        font-family: $ff__sans__barlow__normal;
+        font-size: $fs__15px;
+
+        @include breakpoint(35em) {
+          font-size: $fs__16px;
+        }
+
+        @include breakpoint(45em) {
+          font-size: $fs__18px;
+        }
+      }
+    }
+
+    &__meta {
+      flex-direction: column;
+      border-top: 1px solid $clr__border;
+      padding-top: 2.5rem;
+      margin-top: 2.5rem;
+      font-size: $fs__15px;
+
+      p {
+        font-size: 1.75rem;
+        margin-bottom: 32px;
+
+        @include breakpoint(45em) {
+          font-size: $fs__28px;
+        }
+      }
+
+      @include breakpoint(35em) {
+        flex-direction: row;
+        justify-content: space-evenly;
+      }
+
+      @include breakpoint(45em) {
+        gap: 6rem;
+        justify-content: start;
+      }
+    }
+  }
+
+  @include breakpoint(45em) {
   }
 }

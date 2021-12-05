@@ -1,14 +1,15 @@
-import "../../styles/_utilities.scss";
-import "./Buttons.scss";
+import '../../styles/_utilities.scss';
+import './Buttons.scss';
 
-const Buttons = () => {
+const Buttons = ({ children, handleDestination, id }) => {
   return (
-    <div className=" tab-list underline-indicators flex">
-      <button className="uppercase active text-accent ff-sans-cond bg-dark letter-spacing-2">Moon</button>
-      <button className="uppercase text-accent ff-sans-cond bg-dark letter-spacing-2">Mars</button>
-      <button className="uppercase text-accent ff-sans-cond bg-dark letter-spacing-2">Europa</button>
-      <button className="uppercase text-accent ff-sans-cond bg-dark letter-spacing-2">Titan</button>
-    </div>
+    <button
+      // className="uppercase active text-accent ff-sans-cond bg-dark letter-spacing-2"
+      className="uppercase text-accent ff-sans-cond letter-spacing-2"
+      onClick={() => handleDestination(id)}
+    >
+      {children}
+    </button>
   );
 };
 

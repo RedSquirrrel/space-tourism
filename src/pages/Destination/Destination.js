@@ -1,46 +1,64 @@
-import { useState } from "react";
-import "./Destination.scss";
+import React, { useState } from 'react';
+import './Destination.scss';
+import Buttons from './../../components/Buttons/Buttons';
 
 const Destination = ({ data }) => {
-  const selectedNames = ["Moon", "Mars", "Europa", "Titan"];
-  const [selectDestination, setSelectDestination] = useState(selectedNames[1]);
+  const selectedNames = ['Moon', 'Mars', 'Europa', 'Titan'];
+  const [selectDestination, setSelectDestination] = useState(selectedNames[0]);
 
-  const handleDestination = (e) => {
-    setSelectDestination(e.target.id);
+  const handleDestination = (planet) => {
+    setSelectDestination(planet);
   };
 
   return (
-    <div className="destination">
-      <h1>
+    <main className="grid-container destination flow">
+      <h1 className="numbered-title uppercase ff-sans-cond destination__title">
         <span>01</span> Pick Your Destination
       </h1>
-      {selectDestination &&
-        selectedNames.map((dest, index) => {
-          return (
-            <button
-              key={index}
-              id={dest}
-              className={selectDestination === dest ? "destination__active" : "destination__btn"}
-              onClick={handleDestination}
-            >
-              {dest}
-            </button>
-          );
-        })}
 
       {data.destinations &&
-        data.destinations.map((d, i) => {
+        data.destinations.map((d) => {
           return (
             d.name === selectDestination && (
-              <div key={i}>
-                <h1>{d.name}</h1>
-                <img src={d.images[0].png} alt={d.name} />
-                <p>{d.description}</p>
-              </div>
+              <React.Fragment key={d.name}>
+                <img className="destination__img" src={d.images[0].png} alt={d.name} />
+
+                <div className="destination__buttons tab-list underline-indicators flex">
+                  {selectDestination &&
+                    selectedNames.map((dest, index) => {
+                      return (
+                        <Buttons
+                          key={dest}
+                          id={dest}
+                          // className={dest === selectedNames[index] ? 'active' : ''}
+                          handleDestination={handleDestination}
+                        >
+                          {dest}
+                        </Buttons>
+                      );
+                    })}
+                </div>
+
+                <article className="destination__info flow ">
+                  <h2 className="ff-serif uppercase destination__name">{d.name}</h2>
+                  <p>{d.description}</p>
+
+                  <div className="destination__meta flex">
+                    <div>
+                      <h3 className="letter-spacing-3 ff-sans-cond  fs-200 text-accent uppercase">Avg. Distance </h3>
+                      <p className="ff-serif text-white uppercase">{d.distance} </p>
+                    </div>
+                    <div>
+                      <h3 className="letter-spacing-3 ff-sans-cond  fs-200 text-accent uppercase">Est. Travel Time </h3>
+                      <p className="ff-serif text-white uppercase">{d.travel} </p>
+                    </div>
+                  </div>
+                </article>
+              </React.Fragment>
             )
           );
         })}
-    </div>
+    </main>
   );
 };
 

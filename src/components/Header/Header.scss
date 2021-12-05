@@ -1,10 +1,10 @@
-@import "./../../styles/variables.scss";
+@import './../../styles/variables.scss';
 
 .header {
   position: absolute;
   margin-block: 2rem;
   width: 100%;
-  height: $headerHeight;
+  // height: $headerHeight;
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
@@ -22,9 +22,10 @@
     align-items: center;
     justify-content: space-between;
 
-    // @include breakpoint(md) {
-    //   margin: 0 2rem 0 2rem;
-    // }
+    @include breakpoint(35em) {
+      // margin: 0 2rem 0 2rem;
+      // gap: 8rem;
+    }
 
     &__logo {
       margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
@@ -40,9 +41,10 @@
       position: fixed;
       top: 5rem;
       left: 1rem;
-      font-size: $fs__300;
+      font-size: $fs__16px;
 
-      @include breakpoint(md) {
+      @include breakpoint(35em) {
+        // gap: clamp(1rem, 1.5vw, 3.5rem);
         gap: clamp(1.5rem, 5vw, 3.5rem);
         position: inherit;
       }
@@ -60,7 +62,7 @@
         }
       }
 
-      @include breakpoint(md) {
+      @include breakpoint(35em) {
         padding-inline: clamp(3rem, 7vw, 7rem);
       }
     }
@@ -87,7 +89,8 @@
         backdrop-filter: blur(5rem);
       }
 
-      @include breakpoint(md) {
+      @include breakpoint(35em) {
+        inset: 0 0 0 10%;
         transform: none;
         // width: auto;
         height: 100%;
@@ -95,13 +98,14 @@
       }
 
       ul {
-        @include breakpoint(md) {
+        // @include breakpoint(45em) {
+        @include breakpoint(35em) {
           flex-direction: row;
         }
 
         li {
           &:not(:last-child) {
-            @include breakpoint(md) {
+            @include breakpoint(35em) {
               margin-bottom: 0;
             }
           }
@@ -120,7 +124,6 @@
       font-size: 2rem;
       transition: 0.3s ease all;
       z-index: 10000;
-
       // &:hover {
       //   color: $clr__dark;
       // }
@@ -130,14 +133,14 @@
       //   outline-offset: 5px;
       // }
 
-      @include breakpoint(md) {
+      @include breakpoint(35em) {
         display: none;
       }
     }
 
     @include breakpoint(desktop) {
       &::after {
-        content: "";
+        content: '';
         display: block;
         position: relative;
         height: 1px;

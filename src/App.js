@@ -1,11 +1,11 @@
-import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home/Home";
-import Destination from "./pages/Destination/Destination";
-import Crew from "./pages/Crew/Crew";
-import Technology from "./pages/Technology/Technology";
-import Header from "./components/Header/Header";
-import React, { useState, useEffect } from "react";
-import jsonData from "./data.json";
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home/Home';
+import Destination from './pages/Destination/Destination';
+import Crew from './pages/Crew/Crew';
+import Technology from './pages/Technology/Technology';
+import Header from './components/Header/Header';
+import React, { useState, useEffect } from 'react';
+import jsonData from './data.json';
 
 const App = () => {
   const [data, setData] = useState([]);

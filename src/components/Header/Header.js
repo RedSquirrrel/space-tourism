@@ -1,23 +1,23 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { BiMenuAltRight } from "react-icons/bi";
-import { AiOutlineClose } from "react-icons/ai";
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { BiMenuAltRight } from 'react-icons/bi';
+import { AiOutlineClose } from 'react-icons/ai';
 
-import "../../styles/_utilities.scss";
-import "./Header.scss";
-import logo from "../../assets/shared/logo.svg";
+import '../../styles/_utilities.scss';
+import './Header.scss';
+import logo from '../../assets/shared/logo.svg';
 
 const Header = () => {
   const shouldBeOpen = () => window.innerWidth > 560;
   const [menuOpen, setMenuOpen] = useState(shouldBeOpen);
 
   useEffect(() => {
-    window.addEventListener("resize", () => {
+    window.addEventListener('resize', () => {
       setMenuOpen(shouldBeOpen());
     });
 
     return () =>
-      window.removeEventListener("resize", () => {
+      window.removeEventListener('resize', () => {
         setMenuOpen(shouldBeOpen());
       });
   }, [menuOpen]);
@@ -33,7 +33,7 @@ const Header = () => {
           <img className="header__content__logo" src={logo} alt="logo" />
         </Link>
 
-        <div className={`header__content__nav ${menuOpen ? "isMenu" : " "}`}>
+        <div className={`header__content__nav ${menuOpen ? 'isMenu' : ' '}`}>
           <ul className="header__content__primary-navigation underline-indicators flex">
             <li className="active">
               <Link to="/" onClick={menuToggleHander} className="ff-sans-cond uppercase text-white letter-spacing-2">

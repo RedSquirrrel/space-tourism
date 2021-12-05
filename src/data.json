@@ -5,7 +5,7 @@
       "images": [
         {
           "pn": "./assets/destination/image-moon.png",
-          "png": "/planets/image-moon.png",
+          "png": "/destination/image-moon.png",
           "webp": "./assets/destination/image-moon.webp"
         }
       ],
@@ -18,7 +18,7 @@
       "images": [
         {
           "pn": "./assets/destination/image-mars.png",
-          "png": "/planets/image-mars.png",
+          "png": "/destination/image-mars.png",
           "webp": "./assets/destination/image-mars.webp"
         }
       ],
@@ -31,7 +31,7 @@
       "images": [
         {
           "pn": "./assets/destination/image-europa.png",
-          "png": "/planets/image-europa.png",
+          "png": "/destination/image-europa.png",
           "webp": "./assets/destination/image-europa.webp"
         }
       ],
@@ -44,7 +44,7 @@
       "images": [
         {
           "pn": "./assets/destination/image-titan.png",
-          "png": "/planets/image-titan.png",
+          "png": "/destination/image-titan.png",
           "webp": "./assets/destination/image-titan.webp"
         }
       ],

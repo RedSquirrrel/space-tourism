@@ -1,13 +1,12 @@
-@import "./variables.scss";
+@import './variables.scss';
 
 .flex {
   display: flex;
-  // gap: $gap, 1rem;
 }
 
 .grid {
   display: grid;
-  // gap: $gap, 1rem;
+  gap: 1rem;
 }
 
 .d-block {
@@ -15,9 +14,8 @@
 }
 
 .flow > *:where(:not(:first-child)) {
-  // margin-top: $flow__space, 1rem;
   margin-top: 1rem;
-  outline: 1px solid red;
+  // outline: 1px solid red;
 }
 
 .container {
@@ -34,7 +32,8 @@
   margin: -1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
-  white-space: nowrap; /* added line */
+  // added line
+  white-space: nowrap;
   border: 0;
 }
 
@@ -63,15 +62,15 @@
 
 // typography
 .ff-serif {
-  font-family: $ff__serif;
+  font-family: $ff__serif__bellefair;
 }
 
 .ff-sans-cond {
-  font-family: $ff__sans__cond;
+  font-family: $ff__sans__barlow__cond;
 }
 
 .ff-sans-normal {
-  font-family: $ff__sans__normal;
+  font-family: $ff__sans__barlow__normal;
 }
 
 .letter-spacing-1 {
@@ -91,8 +90,8 @@
 .fs-900 {
   font-size: $fs__900;
 }
-.fs-800 {
-  font-size: $fs__800;
+.fs-100px {
+  font-size: $fs__100px;
 }
 .fs-700 {
   font-size: $fs__700;
@@ -104,13 +103,13 @@
   font-size: $fs__500;
 }
 .fs-400 {
-  font-size: $fs__400;
+  font-size: $fs__18px;
 }
 .fs-300 {
-  font-size: $fs__300;
+  font-size: $fs__16px;
 }
 .fs-200 {
-  font-size: $fs__200;
+  font-size: $fs__15px;
 }
 
 .fs-900,
@@ -121,7 +120,7 @@
 }
 
 .numbered-title {
-  font-family: $ff__sans__cond;
+  font-family: $ff__sans__barlow__cond;
   font-size: $fs__500;
   text-transform: uppercase;
   letter-spacing: 4.72px;
@@ -138,6 +137,7 @@
   border: 0;
   cursor: pointer;
   border-bottom: 0.2rem solid hsla(hue($clr__white), saturation($clr__white), lightness($clr__white), 0);
+  background-color: transparent;
 }
 
 .underline-indicators > *:hover,
@@ -148,4 +148,30 @@
 
 .underline-indicators > .active {
   border-color: hsla(hue($clr__white), saturation($clr__white), lightness($clr__white), 1);
+}
+
+.grid-container {
+  text-align: center;
+  display: grid;
+  place-items: center;
+  padding-inline: 1rem;
+  padding-bottom: 4rem;
+
+  @include breakpoint(45em) {
+    text-align: left;
+    justify-items: start;
+    column-gap: 2rem;
+    grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
+  }
+
+  p:not([class]) {
+    max-width: 50ch;
+    color: hsl(hue($clr__light), saturation($clr__light), lightness($clr__light));
+    line-height: 1.7;
+    margin-bottom: 65px;
+
+    @include breakpoint(45em) {
+      width: 50ch;
+    }
+  }
 }

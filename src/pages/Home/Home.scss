@@ -1,4 +1,4 @@
-@import "./../../styles/variables.scss";
+@import './../../styles/variables.scss';
 
 .skip-to-content {
   position: absolute;
@@ -19,10 +19,10 @@
   overflow: hidden;
   background: url(../../assets/home/background-home-mobile.jpg) no-repeat center bottom/cover;
 
-  @include breakpoint(tablets) {
+  @include breakpoint(35em) {
     background: url(../../assets/home/background-home-tablet.jpg) no-repeat center center/cover;
   }
-  @include breakpoint(desktop) {
+  @include breakpoint(45em) {
     background: url(../../assets/home/background-home-desktop.jpg) no-repeat center center/cover;
   }
 
@@ -37,7 +37,7 @@
       max-width: 70ch;
     }
 
-    @include breakpoint(tablets) {
+    @include breakpoint(35em) {
       text-align: left;
       column-gap: 2rem;
       grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);
@@ -57,7 +57,7 @@
 
     h1 {
       margin-bottom: 2rem;
-      font-size: $fs__400;
+      font-size: $fs__18px;
     }
 
     span {
@@ -65,7 +65,7 @@
     }
 
     &__paragraph {
-      font-size: $fs__300;
+      font-size: $fs__16px;
     }
 
     &__large-button {
@@ -81,7 +81,7 @@
       z-index: 1;
 
       &::after {
-        content: "";
+        content: '';
         position: absolute;
         z-index: -1;
         width: 100%;
