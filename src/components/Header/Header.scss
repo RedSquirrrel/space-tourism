@@ -83,6 +83,7 @@
       transform: translate(100%);
       transition: 0.3s ease transform;
       z-index: 1000;
+      padding: 1rem 0 0.5rem 0;
 
       @supports (backdrop-filter: blur(5rem)) {
         background: rgba(250, 250, 250, 0.04);
@@ -138,7 +139,7 @@
       }
     }
 
-    @include breakpoint(desktop) {
+    @include breakpoint(45em) {
       &::after {
         content: '';
         display: block;
