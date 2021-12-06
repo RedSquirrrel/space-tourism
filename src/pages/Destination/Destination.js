@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import './Destination.scss';
 import Buttons from './../../components/Buttons/Buttons';
 
-const Destination = ({ data }) => {
-  const selectedNames = ['Moon', 'Mars', 'Europa', 'Titan'];
+const Destination = ({ dataDestinations }) => {
+  const selectedNames = dataDestinations.map((n, i) => {
+    i = n.name;
+    return n.name;
+  });
   const [selectDestination, setSelectDestination] = useState(selectedNames[0]);
 
   const handleDestination = (planet) => {
@@ -11,13 +14,13 @@ const Destination = ({ data }) => {
   };
 
   return (
-    <main className="grid-container destination flow">
+    <main id="main-destination" className="grid-container destination flow">
       <h1 className="numbered-title uppercase ff-sans-cond destination__title">
         <span>01</span> Pick Your Destination
       </h1>
 
-      {data.destinations &&
-        data.destinations.map((d) => {
+      {dataDestinations &&
+        dataDestinations.map((d) => {
           return (
             d.name === selectDestination && (
               <React.Fragment key={d.name}>

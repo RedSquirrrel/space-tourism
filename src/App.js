@@ -8,22 +8,32 @@ import React, { useState, useEffect } from 'react';
 import jsonData from './data.json';
 
 const App = () => {
-  const [data, setData] = useState([]);
+  const [dataDestinations, setDataDestinations] = useState([]);
+  const [crewData, setCrewData] = useState([]);
+  const [technologyData, setTechnologyData] = useState([]);
 
   useEffect(() => {
-    setData(jsonData);
-  }, [data]);
+    setDataDestinations(jsonData.destinations);
+  }, [dataDestinations]);
 
-  console.log(data);
+  useEffect(() => {
+    setCrewData(jsonData.crew);
+  }, [crewData]);
+
+  useEffect(() => {
+    setTechnologyData(jsonData.technology);
+  }, [technologyData]);
+
+  // console.log(data);
 
   return (
     <>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/destination" element={<Destination data={data} />} />
-        <Route path="/crew" element={<Crew />} />
-        <Route path="/technology" element={<Technology />} />
+        <Route path="/destination" element={<Destination dataDestinations={dataDestinations} />} />
+        <Route path="/crew" element={<Crew crewData={crewData} />} />
+        <Route path="/technology" element={<Technology technologyData={technologyData} />} />
       </Routes>
     </>
   );

@@ -1,19 +1,11 @@
-import "../../styles/_utilities.scss";
-import "./Dots.scss";
+import '../../styles/_utilities.scss';
+import './Dots.scss';
 
-const Dots = () => {
+const Dots = ({ children, handleCrew, id }) => {
   return (
-    <div className="dot-indicators flex">
-      <button className="activee">
-        <span className="sr-only">Slide title</span>
-      </button>
-      <button>
-        <span className="sr-only">Slide title</span>
-      </button>
-      <button>
-        <span className="sr-only">Slide title</span>
-      </button>
-    </div>
+    <button className="activee" onClick={() => handleCrew(id)}>
+      <span className="sr-only">{children}</span>
+    </button>
   );
 };
 

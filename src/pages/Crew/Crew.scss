@@ -1,14 +1,58 @@
-@import "./../../styles/variables.scss";
+@import './../../styles/variables.scss';
 
-.crew {
-  min-height: 100vh;
-  overflow: hidden;
+#main-crew {
   background: url(../../assets/crew/background-crew-mobile.jpg) no-repeat center bottom/cover;
+  padding-top: 8rem;
 
-  @include breakpoint(tablets) {
+  @include breakpoint(35em) {
     background: url(../../assets/crew/background-crew-tablet.jpg) no-repeat center center/cover;
+
+    grid-template-areas:
+      'title'
+      'content'
+      'tabs'
+      'image';
   }
-  @include breakpoint(desktop) {
+  @include breakpoint(45em) {
     background: url(../../assets/crew/background-crew-desktop.jpg) no-repeat center center/cover;
+
+    grid-template-areas:
+      '. title title .'
+      '. content image .'
+      '. tabs image .';
+  }
+
+  grid-template-areas:
+    'title'
+    'image'
+    'tabs'
+    'content';
+
+  .crew {
+    &__title {
+      grid-area: title;
+    }
+
+    &__dots {
+      grid-area: tabs;
+    }
+
+    &__details {
+      grid-area: content;
+
+      &__role {
+        font-size: $fs__16px;
+      }
+
+      &__name {
+        font-size: $fs__24px;
+      }
+    }
+
+    &__img {
+      grid-area: image;
+      max-width: 60%;
+      border-bottom: 1px solid $clr__border;
+    }
   }
 }
