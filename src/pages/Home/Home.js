@@ -1,5 +1,6 @@
 // import Header from "../../components/Header/Header";
-import "./Home.scss";
+import { Link } from 'react-router-dom';
+import './Home.scss';
 
 const Home = () => {
   return (
@@ -22,12 +23,9 @@ const Home = () => {
             </p>
           </div>
           <div>
-            <a
-              className="grid-container__large-button uppercase ff-serif bg-white text-dark"
-              href="https://changeme.com"
-            >
+            <Link to="/destination" className="grid-container__large-button uppercase ff-serif bg-white text-dark">
               Explore
-            </a>
+            </Link>
           </div>
         </div>
       </main>

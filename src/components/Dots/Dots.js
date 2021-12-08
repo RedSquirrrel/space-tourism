@@ -1,9 +1,14 @@
 import '../../styles/_utilities.scss';
 import './Dots.scss';
 
-const Dots = ({ children, handleCrew, id }) => {
+const Dots = ({ children, handleCrew, id, selectedCrew }) => {
   return (
-    <button className="activee" onClick={() => handleCrew(id)}>
+    <button
+      aria-selected="true"
+      role="tab"
+      className={selectedCrew === id ? 'activee' : ''}
+      onClick={() => handleCrew(id)}
+    >
       <span className="sr-only">{children}</span>
     </button>
   );

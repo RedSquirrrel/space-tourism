@@ -24,8 +24,6 @@ const App = () => {
     setTechnologyData(jsonData.technology);
   }, [technologyData]);
 
-  // console.log(data);
-
   return (
     <>
       <Header />

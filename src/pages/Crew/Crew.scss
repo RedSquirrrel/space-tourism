@@ -3,19 +3,27 @@
 #main-crew {
   background: url(../../assets/crew/background-crew-mobile.jpg) no-repeat center bottom/cover;
   padding-top: 8rem;
+  overflow-x: hidden;
+  max-height: 100vh;
 
   @include breakpoint(35em) {
     background: url(../../assets/crew/background-crew-tablet.jpg) no-repeat center center/cover;
-
+    scrollbar-gutter: auto;
     grid-template-areas:
       'title'
       'content'
       'tabs'
       'image';
+    padding-bottom: 0;
+    margin-bottom: 0;
   }
+
   @include breakpoint(45em) {
     background: url(../../assets/crew/background-crew-desktop.jpg) no-repeat center center/cover;
-
+    grid-template-columns: minmax(1rem, 1fr) minmax(0, 37rem) minmax(0, 23rem) minmax(1rem, 1fr);
+    justify-items: start;
+    padding-top: 9.55rem;
+    column-gap: 2rem;
     grid-template-areas:
       '. title title .'
       '. content image .'
@@ -29,8 +37,22 @@
     'content';
 
   .crew {
+    // @include breakpoint(45em) {
+    //   bottom: 0;
+    // }
+
     &__title {
       grid-area: title;
+      font-size: $fs__16px;
+      margin-bottom: 2rem;
+
+      @include breakpoint(35em) {
+        justify-self: start;
+        margin-top: 2rem;
+      }
+      @include breakpoint(45em) {
+        margin-top: 9.625rem;
+      }
     }
 
     &__dots {
@@ -42,17 +64,61 @@
 
       &__role {
         font-size: $fs__16px;
+        margin-bottom: 0.5rem;
+        opacity: 0.5;
+
+        @include breakpoint(35em) {
+          font-size: $fs__24px;
+        }
+
+        @include breakpoint(45em) {
+          font-size: $fs__32px;
+          margin-bottom: 0.8rem;
+        }
       }
 
       &__name {
         font-size: $fs__24px;
+        margin-bottom: 1rem;
+
+        @include breakpoint(35em) {
+          font-size: $fs__40px;
+        }
+
+        @include breakpoint(45em) {
+          font-size: $fs__56px;
+          margin-top: 0;
+          margin-bottom: 1.7rem;
+        }
       }
     }
 
-    &__img {
+    &__picture {
       grid-area: image;
-      max-width: 60%;
+      max-width: 100%;
       border-bottom: 1px solid $clr__border;
+      border-bottom-width: 100%;
+      margin-bottom: 2rem;
+
+      @include breakpoint(35em) {
+        margin-bottom: 3px;
+      }
+
+      @include breakpoint(45em) {
+        margin-top: 7.5rem;
+      }
+
+      &__img {
+        max-width: 60%;
+        margin: 0 auto;
+
+        @include breakpoint(45em) {
+          grid-column: span 5;
+          align-self: end;
+          justify-self: end;
+          max-width: 90%;
+        }
+      }
     }
   }
 }

@@ -97,7 +97,7 @@
   font-size: $fs__700;
 }
 .fs-600 {
-  font-size: $fs__600;
+  font-size: $fs__32px;
 }
 .fs-500 {
   font-size: $fs__500;
@@ -150,6 +150,10 @@
   border-color: hsla(hue($clr__white), saturation($clr__white), lightness($clr__white), 1);
 }
 
+.active {
+  border-color: hsla(hue($clr__white), saturation($clr__white), lightness($clr__white), 1);
+}
+
 .grid-container {
   text-align: center;
   display: grid;
@@ -169,9 +173,11 @@
     color: hsl(hue($clr__light), saturation($clr__light), lightness($clr__light));
     line-height: 1.7;
     margin-bottom: 65px;
+    font-size: $fs__15px;
 
     @include breakpoint(45em) {
       width: 50ch;
+      font-size: $fs__18px;
     }
   }
 }

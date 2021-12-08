@@ -33,7 +33,7 @@ const Destination = ({ dataDestinations }) => {
                         <Buttons
                           key={dest}
                           id={dest}
-                          // className={dest === selectedNames[index] ? 'active' : ''}
+                          selectDestination={selectDestination}
                           handleDestination={handleDestination}
                         >
                           {dest}

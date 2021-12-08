@@ -29,7 +29,7 @@ const Crew = ({ crewData }) => {
                   {selectedCrew &&
                     selectedCrews.map((crewName, index) => {
                       return (
-                        <Dots key={crewName} id={crewName} handleCrew={handleCrew}>
+                        <Dots key={crewName} selectedCrew={selectedCrew} id={crewName} handleCrew={handleCrew}>
                           {crewName}
                         </Dots>
                       );
@@ -43,7 +43,9 @@ const Crew = ({ crewData }) => {
                   </header>
                   <p>{c.bio} </p>
                 </article>
-                <img className="crew__img" src={c.images[0].png} alt={c.name} />
+                <picture className="crew__picture">
+                  <img className="crew__picture__img" src={c.images[0].png} alt={c.name} />
+                </picture>
               </React.Fragment>
             )
           );

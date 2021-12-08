@@ -10,6 +10,7 @@
 
   @include breakpoint(45em) {
     background: url(../../assets/destination/background-destination-desktop.jpg) no-repeat center center/cover;
+    // scrollbar-gutter: auto;
     grid-template-areas:
       '. title title .'
       '. image tabs .'
@@ -42,6 +43,7 @@
       grid-area: image;
       max-width: 60%;
       margin-bottom: 26px;
+      align-self: start;
 
       @include breakpoint(45em) {
         max-width: 90%;

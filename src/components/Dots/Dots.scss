@@ -1,5 +1,5 @@
-@import "../../styles/variables.scss";
-@import "../../styles/utilities.scss";
+@import '../../styles/variables.scss';
+@import '../../styles/utilities.scss';
 
 .dot-indicators > * {
   cursor: pointer;
@@ -7,10 +7,19 @@
   border-radius: 50%;
   aspect-ratio: 1;
 
-  padding: 1em;
+  padding: 0.313em; // 10px x 10px
   // gap: 4rem;
   margin-right: 1rem;
+  margin-bottom: 2rem;
   background-color: hsla(hue($clr__white), saturation($clr__white), lightness($clr__white), 0.25);
+
+  @include breakpoint(35em) {
+    margin-top: -20px;
+  }
+
+  @include breakpoint(45em) {
+    padding: 0.469rem; // 15px x 15px
+  }
 
   &:hover,
   :focus {
@@ -20,4 +29,8 @@
   &.activee {
     background-color: hsla(hue($clr__white), saturation($clr__white), lightness($clr__white), 1);
   }
+
+  // & > [aria-selected='true'] {
+  //   background-color: hsla(hue($clr__white), saturation($clr__white), lightness($clr__white), 1);
+  // }
 }
