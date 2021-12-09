@@ -138,20 +138,19 @@
   cursor: pointer;
   border-bottom: 0.2rem solid hsla(hue($clr__white), saturation($clr__white), lightness($clr__white), 0);
   background-color: transparent;
+  line-height: normal;
+  transition: all 0.5s ease 0s;
 }
 
 .underline-indicators > *:hover,
 .underline-indicators > *:focus {
-  padding: 1em 0;
+  // padding: 1em 0;
   border-bottom: 0.2rem solid hsla(hue($clr__white), saturation($clr__white), lightness($clr__white), 0.5);
 }
 
-.underline-indicators > .active {
-  border-color: hsla(hue($clr__white), saturation($clr__white), lightness($clr__white), 1);
-}
-
-.active {
-  border-color: hsla(hue($clr__white), saturation($clr__white), lightness($clr__white), 1);
+.underline-indicators .active {
+  padding: 1em 0;
+  border-bottom: 0.2rem solid hsla(hue($clr__white), saturation($clr__white), lightness($clr__white), 1);
 }
 
 .grid-container {

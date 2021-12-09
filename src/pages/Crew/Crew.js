@@ -3,7 +3,7 @@ import './Crew.scss';
 import Dots from './../../components/Dots/Dots';
 
 const Crew = ({ crewData }) => {
-  console.log(crewData);
+  // console.log(crewData);
   const selectedCrews = crewData.map((n, i) => {
     // i = n.name;
     return n.name;
