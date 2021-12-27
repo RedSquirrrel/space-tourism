@@ -10,7 +10,7 @@
     'content';
 
   @include breakpoint(24em) {
-    background: url(./../assets/crew/background-crew-tablet.jpg) no-repeat center center/cover;
+    background: url(../../assets/crew/background-crew-tablet.jpg) no-repeat center center/cover;
     padding: 0 0.5rem 0 0.5rem;
     grid-template-areas:
       'title'
