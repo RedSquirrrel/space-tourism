@@ -2,26 +2,26 @@
 
 #main-destination {
   background: url(../../assets/destination/background-destination-mobile.jpg) no-repeat center bottom/cover;
-  padding-top: 8rem;
-
-  @include breakpoint(35em) {
-    background: url(../../assets/destination/background-destination-tablet.jpg) no-repeat center center/cover;
-  }
-
-  @include breakpoint(45em) {
-    background: url(../../assets/destination/background-destination-desktop.jpg) no-repeat center center/cover;
-    // scrollbar-gutter: auto;
-    grid-template-areas:
-      '. title title .'
-      '. image tabs .'
-      '. image content .';
-  }
-
+  padding: 8rem 0.5rem;
+  // min-height: 100vh;
   grid-template-areas:
     'title'
     'image'
     'tabs'
     'content';
+
+  @include breakpoint(24em) {
+    background: url(../../assets/destination/background-destination-tablet.jpg) no-repeat center center/cover;
+  }
+
+  @include breakpoint(48em) {
+    background: url(../../assets/destination/background-destination-desktop.jpg) no-repeat center center/cover;
+    column-gap: 3rem;
+    grid-template-areas:
+      '. title title .'
+      '. image tabs .'
+      '. image content .';
+  }
 
   .destination {
     &__title {
@@ -29,23 +29,27 @@
       font-size: $fs__16px;
       margin-bottom: 32px;
 
-      @include breakpoint(35em) {
+      @include breakpoint(24em) {
         justify-self: start;
         margin-top: 2rem;
       }
 
-      @include breakpoint(45em) {
+      @include breakpoint(48em) {
         font-size: $fs__28px;
       }
     }
 
     &__img {
       grid-area: image;
-      max-width: 60%;
+      max-width: 100%;
       margin-bottom: 26px;
-      align-self: start;
+      align-self: center;
 
-      @include breakpoint(45em) {
+      @include breakpoint(24em) {
+        max-width: 60%;
+      }
+
+      @include breakpoint(48em) {
         max-width: 90%;
       }
     }
@@ -54,7 +58,7 @@
       font-size: $fs__56px;
       margin-bottom: 1px;
 
-      @include breakpoint(45em) {
+      @include breakpoint(48em) {
         font-size: $fs__100px;
       }
     }
@@ -70,11 +74,11 @@
         font-family: $ff__sans__barlow__normal;
         font-size: $fs__15px;
 
-        @include breakpoint(35em) {
+        @include breakpoint(24em) {
           font-size: $fs__16px;
         }
 
-        @include breakpoint(45em) {
+        @include breakpoint(48em) {
           font-size: $fs__18px;
         }
       }
@@ -91,23 +95,20 @@
         font-size: 1.75rem;
         margin-bottom: 32px;
 
-        @include breakpoint(45em) {
+        @include breakpoint(48em) {
           font-size: $fs__28px;
         }
       }
 
-      @include breakpoint(35em) {
+      @include breakpoint(24em) {
         flex-direction: row;
         justify-content: space-evenly;
       }
 
-      @include breakpoint(45em) {
+      @include breakpoint(48em) {
         gap: 6rem;
         justify-content: start;
       }
     }
-  }
-
-  @include breakpoint(45em) {
   }
 }

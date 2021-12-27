@@ -3,12 +3,9 @@ import './Crew.scss';
 import Dots from './../../components/Dots/Dots';
 
 const Crew = ({ crewData }) => {
-  // console.log(crewData);
-  const selectedCrews = crewData.map((n, i) => {
-    // i = n.name;
-    return n.name;
-  });
-  const [selectedCrew, setSelectCrew] = useState(selectedCrews[0]);
+  const selectedCrews = crewData.map((c) => c.name);
+
+  const [selectedCrew, setSelectCrew] = useState('Douglas Hurley');
 
   const handleCrew = (crew) => {
     setSelectCrew(crew);
@@ -29,9 +26,7 @@ const Crew = ({ crewData }) => {
                   {selectedCrew &&
                     selectedCrews.map((crewName, index) => {
                       return (
-                        <Dots key={crewName} selectedCrew={selectedCrew} id={crewName} handleCrew={handleCrew}>
-                          {crewName}
-                        </Dots>
+                        <Dots key={crewName} selectedDot={selectedCrew} id={crewName} handleDot={handleCrew}></Dots>
                       );
                     })}
                 </div>

@@ -10,15 +10,11 @@
 
 body {
   font-family: $ff__sans__barlow__normal;
-  // font-size: 62.5%;
   color: hsl(hue($clr__white), saturation($clr__white), lightness($clr__white));
   background: $clr__dark;
   line-height: 1.5;
-  min-height: 100vh;
   display: grid;
   grid-template-rows: min-content 1fr;
-
-  // overflow-x: hidden;
 }
 
 h1,

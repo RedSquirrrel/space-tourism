@@ -5,38 +5,43 @@ $clr__light: hsl(231, 77%, 90%);
 $clr__border: hsl(231, 15%, 26%);
 
 // font-sizes
-// $fs__900: 9.375rem;
-$fs__900: unquote(
-  $string: 'clamp(5rem, 8vw + 1rem, 9.375rem)',
-);
-// $fs__800: 6.25rem;
-$fs__700: 3.5rem;
-$fs__500: 1.75rem;
-
+$fs__9px: 0.5625rem;
+$fs__14px: 0.875rem;
 $fs__15px: 0.9375rem;
 $fs__16px: 1rem;
 $fs__18px: 1.125rem;
 $fs__24px: 1.5rem;
+$fs__26px: 1.625rem;
 $fs__28px: 1.75rem;
 $fs__32px: 2rem;
+$fs__34px: 2.125rem;
 $fs__40px: 2.5rem;
 $fs__56px: 3.5rem;
+$fs__80px: 5rem;
 $fs__100px: 6.25rem;
+$fs__150px: 9.375rem;
 
 // font-families
 $ff__serif__bellefair: 'Bellefair', serif;
 $ff__sans__barlow__cond: 'Barlow Condensed', sans-serif;
 $ff__sans__barlow__normal: 'Barlow', sans-serif;
 
+// breakpoints
 @mixin breakpoint($point) {
-  @if $point == 35em {
-    @media (min-width: 35em) {
+  @if $point == 24em {
+    @media (min-width: 24em) {
       @content;
     }
   }
 
-  @if $point == 45em {
-    @media (min-width: 45em) {
+  @if $point == 48em {
+    @media (min-width: 48em) {
+      @content;
+    }
+  }
+
+  @if $point == 90em {
+    @media (min-width: 90em) {
       @content;
     }
   }

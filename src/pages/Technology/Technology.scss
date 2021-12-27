@@ -1,14 +1,118 @@
-@import "./../../styles/variables.scss";
+@import './../../styles/variables.scss';
 
-.technology {
-  min-height: 100vh;
-  overflow: hidden;
+#main-technology {
   background: url(../../assets/technology/background-technology-mobile.jpg) no-repeat center bottom/cover;
+  padding: 8rem 0 1rem 0;
+  height: 100vh;
+  grid-template-areas:
+    'title'
+    'image'
+    'tabs'
+    'content';
 
-  @include breakpoint(tablets) {
+  @include breakpoint(24em) {
     background: url(../../assets/technology/background-technology-tablet.jpg) no-repeat center center/cover;
   }
-  @include breakpoint(desktop) {
+
+  @include breakpoint(48em) {
     background: url(../../assets/technology/background-technology-desktop.jpg) no-repeat center center/cover;
+    grid-template-columns: minmax(0, 120px) minmax(5rem, 0.25fr) minmax(10rem, auto) minmax(10rem, auto);
+    justify-items: start;
+    column-gap: 2rem;
+    grid-template-areas:
+      '. title title  title'
+      '. tabs content image '
+      '. tabs content image';
+  }
+
+  .technology {
+    &__title {
+      grid-area: title;
+      font-size: $fs__16px;
+      margin-bottom: 32px;
+
+      @include breakpoint(24em) {
+        justify-self: start;
+        margin-top: 2rem;
+      }
+
+      @include breakpoint(48em) {
+        font-size: $fs__28px;
+        margin-top: 5rem;
+      }
+    }
+
+    &__picture {
+      grid-area: image;
+      margin-bottom: $fs__34px;
+
+      &__img {
+        width: 100%;
+      }
+
+      @include breakpoint(48em) {
+        justify-self: end;
+        margin-bottom: unset;
+      }
+    }
+
+    &__dots {
+      grid-area: tabs;
+      margin-bottom: $fs__26px;
+      aspect-ratio: 1.45;
+      font-size: $fs__16px;
+      font-family: $ff__serif__bellefair;
+      justify-content: center;
+
+      button {
+        background-color: transparent;
+        border: 1px solid hsla(hue($clr__white), saturation($clr__white), lightness($clr__white), 0.25);
+        color: $clr__white;
+
+        &:hover,
+        :focus {
+          border-color: hsl(hue($clr__white), saturation($clr__white), lightness($clr__white));
+        }
+
+        &.active-dot {
+          background-color: hsla(hue($clr__white), saturation($clr__white), lightness($clr__white), 1);
+          color: $clr__dark;
+        }
+        @include breakpoint(48em) {
+          height: 80px;
+          width: 80px;
+          font-size: $fs__32px;
+          margin-top: 1px;
+        }
+      }
+      @include breakpoint(48em) {
+        flex-direction: column;
+      }
+    }
+
+    &__info {
+      grid-area: content;
+      max-width: 90%;
+
+      &__term {
+        font-size: $fs__14px;
+        font-family: $ff__sans__barlow__cond;
+        margin-bottom: $fs__9px;
+      }
+
+      &__name {
+        font-size: $fs__24px;
+        margin-bottom: 1rem;
+
+        @include breakpoint(48em) {
+          font-size: $fs__56px;
+          margin-top: 0;
+        }
+      }
+      @include breakpoint(48em) {
+        justify-self: center;
+        align-self: center;
+      }
+    }
   }
 }

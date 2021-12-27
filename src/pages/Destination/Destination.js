@@ -3,11 +3,8 @@ import './Destination.scss';
 import Buttons from './../../components/Buttons/Buttons';
 
 const Destination = ({ dataDestinations }) => {
-  const selectedNames = dataDestinations.map((n, i) => {
-    i = n.name;
-    return n.name;
-  });
-  const [selectDestination, setSelectDestination] = useState(selectedNames[0]);
+  const selectedNames = dataDestinations.map((n) => n.name);
+  const [selectDestination, setSelectDestination] = useState('Moon');
 
   const handleDestination = (planet) => {
     setSelectDestination(planet);

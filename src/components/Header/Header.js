@@ -37,7 +37,7 @@ const Header = () => {
           <ul className="header__content__primary-navigation underline-indicators flex">
             <li>
               <NavLink to="/" onClick={menuToggleHander} className="ff-sans-cond uppercase text-white letter-spacing-2">
-                <span aria-hidden="true">01</span>Home
+                <span>00</span>Home
               </NavLink>
             </li>
             <li>
@@ -46,7 +46,7 @@ const Header = () => {
                 onClick={menuToggleHander}
                 className="ff-sans-cond uppercase text-white letter-spacing-2"
               >
-                <span aria-hidden="true">02</span>Destination
+                <span>01</span>Destination
               </NavLink>
             </li>
             <li>
@@ -55,12 +55,12 @@ const Header = () => {
                 onClick={menuToggleHander}
                 className="ff-sans-cond uppercase text-white letter-spacing-2"
               >
-                <span aria-hidden="true">03</span>Crew
+                <span>02</span>Crew
               </NavLink>
             </li>
             <li>
               <NavLink to="/technology" onClick={menuToggleHander} className="uppercase text-white letter-spacing-2">
-                <span aria-hidden="true">03</span>Technology
+                <span>03</span>Technology
               </NavLink>
             </li>
           </ul>

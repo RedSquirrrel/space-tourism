@@ -6,7 +6,6 @@
 
 .grid {
   display: grid;
-  gap: 1rem;
 }
 
 .d-block {
@@ -87,41 +86,9 @@
   text-transform: uppercase;
 }
 
-.fs-900 {
-  font-size: $fs__900;
-}
-.fs-100px {
-  font-size: $fs__100px;
-}
-.fs-700 {
-  font-size: $fs__700;
-}
-.fs-600 {
-  font-size: $fs__32px;
-}
-.fs-500 {
-  font-size: $fs__500;
-}
-.fs-400 {
-  font-size: $fs__18px;
-}
-.fs-300 {
-  font-size: $fs__16px;
-}
-.fs-200 {
-  font-size: $fs__15px;
-}
-
-.fs-900,
-.fs-800,
-.fs-700,
-.fs-600 {
-  line-height: 1.1;
-}
-
 .numbered-title {
   font-family: $ff__sans__barlow__cond;
-  font-size: $fs__500;
+  font-size: $fs__28px;
   text-transform: uppercase;
   letter-spacing: 4.72px;
 }
@@ -133,7 +100,7 @@
 }
 
 .underline-indicators > * {
-  padding: 1em 0;
+  padding: 2.2em 0;
   border: 0;
   cursor: pointer;
   border-bottom: 0.2rem solid hsla(hue($clr__white), saturation($clr__white), lightness($clr__white), 0);
@@ -144,13 +111,21 @@
 
 .underline-indicators > *:hover,
 .underline-indicators > *:focus {
-  // padding: 1em 0;
+  padding: 2.2em 0;
   border-bottom: 0.2rem solid hsla(hue($clr__white), saturation($clr__white), lightness($clr__white), 0.5);
+
+  @include breakpoint(48em) {
+    padding: 2.2em 0;
+  }
 }
 
 .underline-indicators .active {
-  padding: 1em 0;
+  padding: 2.2em 0;
   border-bottom: 0.2rem solid hsla(hue($clr__white), saturation($clr__white), lightness($clr__white), 1);
+
+  @include breakpoint(48em) {
+    padding: 2.2em 0;
+  }
 }
 
 .grid-container {
@@ -160,11 +135,11 @@
   padding-inline: 1rem;
   padding-bottom: 4rem;
 
-  @include breakpoint(45em) {
+  @include breakpoint(48em) {
     text-align: left;
     justify-items: start;
     column-gap: 2rem;
-    grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
+    grid-template-columns: minmax(4rem, 1fr) repeat(2, minmax(0, 33rem)) minmax(2rem, 1fr);
   }
 
   p:not([class]) {
@@ -174,8 +149,8 @@
     margin-bottom: 65px;
     font-size: $fs__15px;
 
-    @include breakpoint(45em) {
-      width: 50ch;
+    @include breakpoint(48em) {
+      width: 44ch;
       font-size: $fs__18px;
     }
   }

@@ -1,15 +1,15 @@
 import '../../styles/_utilities.scss';
 import './Dots.scss';
 
-const Dots = ({ children, handleCrew, id, selectedCrew }) => {
+const Dots = ({ children, handleDot, id, selectedDot }) => {
   return (
     <button
       aria-selected="true"
       role="tab"
-      className={selectedCrew === id ? 'activee' : ''}
-      onClick={() => handleCrew(id)}
+      className={`transparent ${selectedDot === id ? 'active-dot' : ''}`}
+      onClick={() => handleDot(id)}
     >
-      <span className="sr-only">{children}</span>
+      <span>{children}</span>
     </button>
   );
 };

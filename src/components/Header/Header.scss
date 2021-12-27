@@ -4,16 +4,18 @@
   position: absolute;
   margin-block: 2rem;
   width: 100%;
-  // height: $headerHeight;
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
+  // transition: 0.3s ease all;
 
-  @media screen and (min-width: 560px) and (max-width: 944px) {
-    margin-block: 0;
+  @include breakpoint(48em) {
+    margin-block: 2.5rem;
   }
 
-  transition: 0.3s ease all;
+  @media screen and (min-width: 24em) and (max-width: 48em) {
+    margin-block: 0;
+  }
 
   &__content {
     overflow: hidden;
@@ -21,11 +23,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    @include breakpoint(35em) {
-      // margin: 0 2rem 0 2rem;
-      // gap: 8rem;
-    }
 
     &__logo {
       margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
@@ -41,10 +38,8 @@
       position: fixed;
       top: 5rem;
       left: 1rem;
-      font-size: $fs__16px;
 
-      @include breakpoint(35em) {
-        // gap: clamp(1rem, 1.5vw, 3.5rem);
+      @include breakpoint(24em) {
         gap: clamp(1.5rem, 5vw, 3.5rem);
         position: inherit;
       }
@@ -57,13 +52,13 @@
         font-weight: 700;
         margin-right: 0.5em;
 
-        @media screen and (min-width: 35em) and (max-width: 44.999em) {
+        @media screen and (min-width: 24em) and (max-width: 48em) {
           display: none;
         }
       }
 
-      @include breakpoint(35em) {
-        padding-inline: clamp(3rem, 7vw, 7rem);
+      @include breakpoint(24em) {
+        padding-inline: clamp(3rem, 8.5vw, 9rem);
       }
     }
 
@@ -90,31 +85,49 @@
         backdrop-filter: blur(5rem);
       }
 
-      @include breakpoint(35em) {
-        inset: 0 0 0 10%;
-        transform: none;
-        // width: auto;
-        height: 100%;
-        position: static;
-      }
-
       ul {
-        // @include breakpoint(45em) {
-        @include breakpoint(35em) {
+        @include breakpoint(24em) {
           flex-direction: row;
         }
 
         li {
           &:not(:last-child) {
-            @include breakpoint(35em) {
+            @include breakpoint(24em) {
               margin-bottom: 0;
             }
           }
+
+          @include breakpoint(48em) {
+            align-items: center;
+          }
+        }
+
+        @media screen and (min-width: 24em) and (max-width: 48em) {
+          max-width: 100%;
+          padding-right: 2rem;
         }
       }
 
       &.isMenu {
         transform: translate(0);
+      }
+
+      @include breakpoint(24em) {
+        inset: 0 0 0 10%;
+        transform: none;
+        height: 6rem;
+        position: static;
+      }
+
+      @include breakpoint(48em) {
+        padding: 0.5rem 0 0.5rem 0;
+        justify-content: center;
+        display: flex;
+      }
+
+      @media screen and (min-width: 24em) and (max-width: 48em) {
+        max-width: 80%;
+        font-size: $fs__14px;
       }
     }
 
@@ -125,21 +138,17 @@
       font-size: 2rem;
       transition: 0.3s ease all;
       z-index: 10000;
-      // &:hover {
-      //   color: $clr__dark;
-      // }
 
-      // &:focus-visible {
-      //   outline: 5px solid white;
-      //   outline-offset: 5px;
-      // }
+      &:hover {
+        color: hsla(hue($clr__white), saturation($clr__white), lightness($clr__white), 0.5);
+      }
 
-      @include breakpoint(35em) {
+      @include breakpoint(24em) {
         display: none;
       }
     }
 
-    @include breakpoint(45em) {
+    @include breakpoint(48em) {
       &::after {
         content: '';
         display: block;
@@ -149,7 +158,7 @@
         margin-right: 0.5rem;
         background: hsla(hue($clr__white), saturation($clr__white), lightness($clr__white), 0.25);
         width: 100%;
-        left: 4rem;
+        left: 2.4rem;
         order: 1;
       }
     }
