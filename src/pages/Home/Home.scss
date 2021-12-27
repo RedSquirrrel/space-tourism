@@ -24,7 +24,7 @@
     'explore-btn';
 
   @include breakpoint(24em) {
-    background: url(./../assets/home/background-home-tablet.jpg) no-repeat center center/cover;
+    background: url(../../assets/home/background-home-tablet.jpg) no-repeat center center/cover;
     padding: 8rem 0.5rem 3.5rem 0.5rem;
   }
   @include breakpoint(48em) {
