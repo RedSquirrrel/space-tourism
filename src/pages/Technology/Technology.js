@@ -21,8 +21,6 @@ const Technology = ({ technologyData }) => {
       });
   }, [desktopSize]);
 
-  console.log(desktopSize);
-
   const handleTerm = (tech) => {
     setTechnology(tech);
   };

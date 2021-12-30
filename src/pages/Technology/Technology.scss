@@ -9,6 +9,14 @@
     'image'
     'tabs'
     'content';
+  animation: dotAnimation 1.5s;
+  @keyframes dotAnimation {
+    0% {
+      filter: blur(20px);
+      opacity: 0;
+      transform: scale(2);
+    }
+  }
 
   @include breakpoint(24em) {
     background: url(../../assets/technology/background-technology-tablet.jpg) no-repeat center center/cover;
@@ -30,6 +38,14 @@
       grid-area: title;
       font-size: $fs__16px;
       margin-bottom: 32px;
+      animation: titleAnimation 0.5s;
+      @keyframes titleAnimation {
+        0% {
+          filter: blur(20px);
+          opacity: 0;
+          transform: scale(2);
+        }
+      }
 
       @include breakpoint(24em) {
         justify-self: start;
@@ -45,6 +61,14 @@
     &__picture {
       grid-area: image;
       margin-bottom: $fs__34px;
+      animation: imgAnimation 1.8s;
+      @keyframes imgAnimation {
+        0% {
+          filter: blur(20px);
+          opacity: 0;
+          transform: scale(2);
+        }
+      }
 
       &__img {
         width: 100%;
@@ -63,6 +87,14 @@
       font-size: $fs__16px;
       font-family: $ff__serif__bellefair;
       justify-content: center;
+      animation: dotAnimation 1s;
+      @keyframes dotAnimation {
+        0% {
+          filter: blur(20px);
+          opacity: 0;
+          transform: scale(2);
+        }
+      }
 
       button {
         background-color: transparent;
@@ -93,6 +125,14 @@
     &__info {
       grid-area: content;
       max-width: 90%;
+      animation: dotAnimation 2s;
+      @keyframes dotAnimation {
+        0% {
+          filter: blur(20px);
+          opacity: 0;
+          transform: scale(2);
+        }
+      }
 
       &__term {
         font-size: $fs__14px;
@@ -103,6 +143,14 @@
       &__name {
         font-size: $fs__24px;
         margin-bottom: 1rem;
+        animation: dotAnimation 1.5s;
+        @keyframes dotAnimation {
+          0% {
+            filter: blur(20px);
+            opacity: 0;
+            transform: scale(2);
+          }
+        }
 
         @include breakpoint(48em) {
           font-size: $fs__56px;

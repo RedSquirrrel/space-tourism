@@ -3,6 +3,8 @@
 #main-crew {
   background: url(../../assets/crew/background-crew-mobile.jpg) no-repeat center bottom/cover;
   padding: 8rem 0.5rem 1rem 0.5rem;
+  height: 100%;
+  min-height: 100vh;
   grid-template-areas:
     'title'
     'image'
@@ -36,6 +38,15 @@
       grid-area: title;
       font-size: $fs__16px;
       margin-bottom: 2rem;
+      animation: titleAnimation 1.5s;
+
+      @keyframes titleAnimation {
+        0% {
+          filter: blur(20px);
+          opacity: 0;
+          transform: scale(2);
+        }
+      }
 
       @include breakpoint(24em) {
         justify-self: start;
@@ -53,6 +64,14 @@
 
       button {
         background-color: hsla(hue($clr__white), saturation($clr__white), lightness($clr__white), 0.25);
+        animation: dotAnimation 1.5s;
+        @keyframes dotAnimation {
+          0% {
+            filter: blur(20px);
+            opacity: 0;
+            transform: scale(2);
+          }
+        }
 
         &:hover,
         :focus {
@@ -67,6 +86,14 @@
 
     &__details {
       grid-area: content;
+      animation: detailsAnimation 1.5s;
+      @keyframes detailsAnimation {
+        0% {
+          filter: blur(20px);
+          opacity: 0;
+          transform: scale(2);
+        }
+      }
 
       &__role {
         font-size: $fs__16px;
@@ -86,6 +113,14 @@
       &__name {
         font-size: $fs__24px;
         margin-bottom: 1rem;
+        animation: nameAnimation 1.5s;
+        @keyframes nameAnimation {
+          0% {
+            filter: blur(20px);
+            opacity: 0;
+            transform: scale(2);
+          }
+        }
 
         @include breakpoint(24em) {
           font-size: $fs__40px;
@@ -104,6 +139,14 @@
       min-width: 100%;
       border-bottom: 2px solid $clr__border;
       margin-bottom: 2rem;
+      animation: imgAnimation 1.5s;
+      @keyframes imgAnimation {
+        0% {
+          filter: blur(20px);
+          opacity: 0;
+          transform: scale(2);
+        }
+      }
 
       @include breakpoint(24em) {
         margin-bottom: 1px;
