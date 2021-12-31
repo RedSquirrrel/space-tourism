@@ -6,7 +6,7 @@ const Buttons = ({ children, handleDestination, id, selectDestination }) => {
     <button
       className={`${
         selectDestination === id ? 'active' : ''
-      } uppercase text-accent ff-sans-cond bg-dark letter-spacing-2`}
+      } uppercase text-accent ff-sans-cond bg-dark letter-spacing-2 dest-btn`}
       onClick={() => handleDestination(id)}
     >
       {children}

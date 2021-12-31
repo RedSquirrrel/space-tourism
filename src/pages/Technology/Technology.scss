@@ -55,6 +55,7 @@
       @include breakpoint(48em) {
         font-size: $fs__28px;
         margin-top: 5rem;
+        margin-left: 5rem;
       }
     }
 
@@ -88,6 +89,7 @@
       font-family: $ff__serif__bellefair;
       justify-content: center;
       animation: dotAnimation 1s;
+
       @keyframes dotAnimation {
         0% {
           filter: blur(20px);
@@ -119,6 +121,7 @@
       }
       @include breakpoint(48em) {
         flex-direction: column;
+        justify-self: end;
       }
     }
 

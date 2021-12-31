@@ -12,6 +12,7 @@ This is a solution to the [Space tourism website challenge on Frontend Mentor](h
   - [Built with](#built-with)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
+- [E2E testing](#cypress-testing)
 
 ## Overview
 
@@ -47,8 +48,12 @@ Users should be able to:
 - Website - [space-tourism-adventure](https://space-tourism-adventure.netlify.app/)
 - Frontend Mentor - [@RedSquirrrel](https://www.frontendmentor.io/profile/RedSquirrrel)
 
-## Acknowledgments
+## Cypress-Testing
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+For starting Cypress first you need to start the project :
 
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+### `npm start`
+
+And after that start Cypress with the following command:
+
+### `npm run cypress:open`

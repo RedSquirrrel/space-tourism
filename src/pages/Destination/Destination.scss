@@ -5,13 +5,14 @@
   padding: 8rem 0.5rem 0 0.5rem;
   height: 100%;
   min-height: 100vh;
-  animation: destAnimation 1s;
+  animation: destAnimation 2s;
 
   @keyframes destAnimation {
     0% {
-      filter: blur(20px);
-      opacity: 0.5;
-      transform: scale(2);
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
     }
   }
 

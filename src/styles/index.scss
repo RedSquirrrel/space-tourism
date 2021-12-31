@@ -11,7 +11,7 @@
 body {
   font-family: $ff__sans__barlow__normal;
   color: hsl(hue($clr__white), saturation($clr__white), lightness($clr__white));
-  // background: $clr__dark;
+  background: $clr__dark;
   line-height: 1.5;
   display: grid;
   grid-template-rows: min-content 1fr;

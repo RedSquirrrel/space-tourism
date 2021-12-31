@@ -19,6 +19,16 @@
   padding: 8rem 0.5rem 1rem 0.5rem;
   min-height: 100vh;
   height: 100%;
+  animation: homeAnimation 2s;
+
+  @keyframes homeAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
   grid-template-areas:
     'title'
     'text-container'
