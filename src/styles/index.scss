@@ -6,6 +6,25 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scrollbar-width: auto;
+  scrollbar-color: $clr__border;
+}
+
+// /* ===== Scrollbar CSS ===== */
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: $fs__9px;
+}
+
+*::-webkit-scrollbar-track {
+  background: $clr__dark;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: hsla(hue($clr__white), saturation($clr__white), lightness($clr__white), 0.5);
+  border-radius: 10px;
+  border: 3px none $clr__border;
 }
 
 body {
@@ -19,9 +38,9 @@ body {
   width: 100%;
   margin: 0 auto;
 
-  @include breakpoint(48em) {
-    overflow: hidden;
-  }
+  // @include breakpoint(48em) {
+  //   overflow: hidden;
+  // }
 }
 
 h1,

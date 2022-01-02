@@ -73,16 +73,16 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background: rgba(32, 32, 32, 0.507);
+      background-color: hsla(hue($clr__white), saturation($clr__white), lightness($clr__white), 0.04);
       backdrop-filter: blur(1rem);
       transform: translate(100%);
       transition: 0.3s ease transform;
       z-index: 1000;
       padding: 1rem 0 0.5rem 0;
 
-      @supports (backdrop-filter: blur(5rem)) {
-        background: rgba(250, 250, 250, 0.04);
-        backdrop-filter: blur(5rem);
+      @supports (backdrop-filter: blur(81.5485px)) {
+        background-color: hsla(hue($clr__white), saturation($clr__white), lightness($clr__white), 0.04);
+        backdrop-filter: blur(81.5485px);
       }
 
       ul {

@@ -102,6 +102,8 @@
         background-color: transparent;
         border: 1px solid hsla(hue($clr__white), saturation($clr__white), lightness($clr__white), 0.25);
         color: $clr__white;
+        height: 40px;
+        width: 40px;
 
         &:hover,
         :focus {
@@ -111,6 +113,10 @@
         &.active-dot {
           background-color: hsla(hue($clr__white), saturation($clr__white), lightness($clr__white), 1);
           color: $clr__dark;
+        }
+        @include breakpoint(24em) {
+          height: 50px;
+          width: 50px;
         }
         @include breakpoint(48em) {
           height: 80px;
