@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import Footer from '../Footer/Footer';
 import './Home.scss';
 
 const Home = () => {
@@ -31,6 +32,10 @@ const Home = () => {
             Explore
           </Link>
         </div>
+
+        <footer className="ff-serif text-accent">
+          <Footer />
+        </footer>
       </main>
     </div>
   );

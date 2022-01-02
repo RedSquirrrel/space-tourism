@@ -32,7 +32,8 @@
   grid-template-areas:
     'title'
     'text-container'
-    'explore-btn';
+    'explore-btn'
+    'footer';
 
   @include breakpoint(24em) {
     background: url(../../assets/home/background-home-tablet.jpg) no-repeat center center/cover;
@@ -41,10 +42,11 @@
   @include breakpoint(48em) {
     background: url(../../assets/home/background-home-desktop.jpg) no-repeat center center/cover;
     grid-template-columns: minmax(1rem, 1fr) minmax(0, 55rem) minmax(0, 1fr) minmax(1rem, 12rem);
-    padding: 15rem 0.6rem 0.5rem 0.6rem;
+    padding: 20rem 0.6rem 0.5rem 0.6rem;
     grid-template-areas:
       '. title explore-btn .'
-      '. text-container explore-btn .';
+      '. text-container explore-btn .'
+      '. footer .  .';
   }
 
   .home {
@@ -144,5 +146,9 @@
         }
       }
     }
+  }
+  footer {
+    grid-area: footer;
+    color: hsla(hue($clr__white), saturation($clr__white), lightness($clr__white), 0.5);
   }
 }

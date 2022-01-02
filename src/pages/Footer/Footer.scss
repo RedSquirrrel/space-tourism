@@ -1,0 +1,34 @@
+@import './../../styles/variables.scss';
+
+footer {
+  color: hsla(hue($clr__white), saturation($clr__white), lightness($clr__white), 0.5);
+  font-size: unquote($string: 'clamp(0.5rem, 3vw, 1.125rem)');
+  animation: pulse 5s infinite;
+  transition: all 0.2s;
+
+  a {
+    text-decoration: none;
+    color: hsla(hue($clr__white), saturation($clr__white), lightness($clr__white), 0.5);
+    animation: pulse 5s infinite;
+    transition: all 0.2s;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+      color: $clr__white;
+    }
+    50% {
+      color: $clr__light;
+    }
+    75% {
+      color: $clr__border;
+    }
+    100% {
+      color: $clr__white;
+    }
+  }
+}

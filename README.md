@@ -12,7 +12,7 @@ This is a solution to the [Space tourism website challenge on Frontend Mentor](h
   - [Built with](#built-with)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
-- [E2E testing](#cypress-testing)
+- [Cypress( E2E testing)](#cypress-testing)
 
 ## Overview
 
@@ -42,6 +42,7 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
+- [Cypress testing](https://www.cypress.io/)
 
 ## Author
 

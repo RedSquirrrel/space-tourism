@@ -44,7 +44,7 @@ const Technology = ({ technologyData }) => {
                   )}
                 </picture>
 
-                <div className="technology__dots dot-indicators transparent flex">
+                <div className="technology__dots dot-indicators  flex">
                   {technology &&
                     selectedNames.map((techno, index) => {
                       return (
