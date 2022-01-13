@@ -65,7 +65,7 @@
         span {
           font-size: $fs__80px;
 
-          @include breakpoint(24em) {
+          @include breakpoint(48em) {
             font-size: $fs__150px;
           }
         }

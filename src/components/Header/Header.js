@@ -34,13 +34,13 @@ const Header = () => {
         </Link>
 
         <div className={`header__content__nav ${menuOpen ? 'isMenu' : ' '}`}>
-          <ul className="header__content__primary-navigation underline-indicators flex">
-            <li>
+          <ul className="header__content__primary-navigation  flex">
+            <li className="underline-indicators">
               <NavLink to="/" onClick={menuToggleHander} className="ff-sans-cond uppercase text-white letter-spacing-2">
                 <span>00</span>Home
               </NavLink>
             </li>
-            <li>
+            <li className="underline-indicators">
               <NavLink
                 to="/destination"
                 onClick={menuToggleHander}
@@ -49,7 +49,7 @@ const Header = () => {
                 <span>01</span>Destination
               </NavLink>
             </li>
-            <li>
+            <li className="underline-indicators">
               <NavLink
                 to="/crew"
                 onClick={menuToggleHander}
@@ -58,7 +58,7 @@ const Header = () => {
                 <span>02</span>Crew
               </NavLink>
             </li>
-            <li>
+            <li className="underline-indicators">
               <NavLink to="/technology" onClick={menuToggleHander} className="uppercase text-white letter-spacing-2">
                 <span>03</span>Technology
               </NavLink>

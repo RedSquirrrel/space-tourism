@@ -107,15 +107,38 @@
   background-color: transparent;
   line-height: normal;
   transition: all 0.5s ease 0s;
+
+  &::after {
+    bottom: -5px;
+    content: '';
+    display: block;
+    height: 0.2em;
+    left: 50%;
+    position: absolute;
+    background: hsla(hue($clr__white), saturation($clr__white), lightness($clr__white), 0.5);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+
+    @include breakpoint(24em) {
+      bottom: -2px;
+    }
+    @include breakpoint(48em) {
+      bottom: -4px;
+    }
+  }
+
+  &:hover::after {
+    width: 100%;
+    left: 0;
+  }
 }
 
-.underline-indicators > *:hover,
 .underline-indicators > *:focus {
   padding: 2.2em 0;
   border-bottom: 0.2rem solid hsla(hue($clr__white), saturation($clr__white), lightness($clr__white), 0.5);
 
   @include breakpoint(48em) {
-    padding: 2.2em 0;
+    padding: 2em 0;
   }
 }
 
