@@ -173,7 +173,7 @@
     font-size: $fs__15px;
 
     @include breakpoint(48em) {
-      width: 44ch;
+      max-width: 44ch;
       font-size: $fs__18px;
     }
   }
