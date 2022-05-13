@@ -29,9 +29,15 @@ const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/destination" element={<Destination dataDestinations={dataDestinations} />} />
-        <Route path="/crew" element={<Crew crewData={crewData} />} />
-        <Route path="/technology" element={<Technology technologyData={technologyData} />} />
+        <Route
+          path="/destination"
+          element={dataDestinations.length < 1 ? <Home /> : <Destination dataDestinations={dataDestinations} />}
+        />
+        <Route path="/crew" element={crewData.length < 1 ? <Home /> : <Crew crewData={crewData} />} />
+        <Route
+          path="/technology"
+          element={technologyData.length < 1 ? <Home /> : <Technology technologyData={technologyData} />}
+        />
       </Routes>
     </>
   );
