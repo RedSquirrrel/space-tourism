@@ -38,13 +38,12 @@
       grid-area: title;
       font-size: $fs__16px;
       margin-bottom: 2rem;
-      animation: titleAnimation 1.5s;
+      animation: titleAnimation 0.8s;
 
       @keyframes titleAnimation {
         0% {
-          filter: blur(20px);
+          filter: blur(15px);
           opacity: 0;
-          transform: scale(2);
         }
       }
 
@@ -64,12 +63,11 @@
 
       button {
         background-color: hsla(hue($clr__white), saturation($clr__white), lightness($clr__white), 0.25);
-        animation: dotAnimation 1.5s;
+        animation: dotAnimation 0.8s;
         @keyframes dotAnimation {
           0% {
-            filter: blur(20px);
+            filter: blur(15px);
             opacity: 0;
-            transform: scale(2);
           }
         }
 
@@ -86,12 +84,11 @@
 
     &__details {
       grid-area: content;
-      animation: detailsAnimation 1.5s;
+      animation: detailsAnimation 0.8s;
       @keyframes detailsAnimation {
         0% {
-          filter: blur(20px);
+          filter: blur(15px);
           opacity: 0;
-          transform: scale(2);
         }
       }
 
@@ -113,12 +110,12 @@
       &__name {
         font-size: $fs__24px;
         margin-bottom: 1rem;
-        animation: nameAnimation 1.5s;
+        animation: nameAnimation 0.8s;
+
         @keyframes nameAnimation {
           0% {
-            filter: blur(20px);
+            filter: blur(15px);
             opacity: 0;
-            transform: scale(2);
           }
         }
 
@@ -139,12 +136,12 @@
       min-width: 100%;
       border-bottom: 2px solid $clr__border;
       margin-bottom: 2rem;
-      animation: imgAnimation 1.5s;
+      animation: imgAnimation 0.8s;
+
       @keyframes imgAnimation {
         0% {
-          filter: blur(20px);
+          filter: blur(15px);
           opacity: 0;
-          transform: scale(2);
         }
       }
 

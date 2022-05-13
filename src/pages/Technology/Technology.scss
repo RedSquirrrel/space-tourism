@@ -9,12 +9,12 @@
     'image'
     'tabs'
     'content';
-  animation: dotAnimation 1.5s;
+  animation: dotAnimation 0.8s;
+
   @keyframes dotAnimation {
     0% {
       filter: blur(20px);
       opacity: 0;
-      transform: scale(2);
     }
   }
 
@@ -39,9 +39,10 @@
       font-size: $fs__16px;
       margin-bottom: 32px;
       animation: titleAnimation 0.5s;
+
       @keyframes titleAnimation {
         0% {
-          filter: blur(20px);
+          filter: blur(15px);
           opacity: 0;
           transform: scale(2);
         }
@@ -62,12 +63,12 @@
     &__picture {
       grid-area: image;
       margin-bottom: $fs__34px;
-      animation: imgAnimation 1.8s;
+      animation: imgAnimation 0.8s;
+
       @keyframes imgAnimation {
         0% {
-          filter: blur(20px);
+          filter: blur(15px);
           opacity: 0;
-          transform: scale(2);
         }
       }
 
@@ -92,9 +93,8 @@
 
       @keyframes dotAnimation {
         0% {
-          filter: blur(20px);
+          filter: blur(15px);
           opacity: 0;
-          transform: scale(2);
         }
       }
 
@@ -134,12 +134,11 @@
     &__info {
       grid-area: content;
       max-width: 90%;
-      animation: dotAnimation 2s;
+      animation: dotAnimation 0.8s;
       @keyframes dotAnimation {
         0% {
-          filter: blur(20px);
+          filter: blur(15px);
           opacity: 0;
-          transform: scale(2);
         }
       }
 
@@ -152,12 +151,12 @@
       &__name {
         font-size: $fs__24px;
         margin-bottom: 1rem;
-        animation: dotAnimation 1.5s;
+        animation: dotAnimation 0.8s;
+
         @keyframes dotAnimation {
           0% {
-            filter: blur(20px);
+            filter: blur(15px);
             opacity: 0;
-            transform: scale(2);
           }
         }
 
